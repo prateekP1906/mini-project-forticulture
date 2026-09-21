@@ -1,0 +1,10 @@
+# DATA DICTIONARY - PHASE 2
+Dataset: master_dataset_v1.csv
+
+1. DATE: Chronological date of observation (YYYY-MM-DD). Used as the primary key for merging.
+2. PRICE_INR: Daily wholesale price of Shevanti (INR). Source: Provided institutional dataset. No extreme values deleted.
+3. RAINFALL_MM: Corrected total daily precipitation (millimeters). Source: NASA POWER.
+4. MAX_TEMP_C: Maximum daily temperature (Celsius). Calculated using NASA Mean Temp + (Temp Range / 2).
+5. MIN_TEMP_C: Minimum daily temperature (Celsius). Calculated using NASA Mean Temp - (Temp Range / 2).
+6. MEAN_TEMP_C: Average daily temperature at 2 meters (Celsius). Source: NASA POWER (T2M).
+7. HUMIDITY_PERCENT: Relative humidity at 2 meters (%). Source: NASA POWER (RH2M).
