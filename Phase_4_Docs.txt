@@ -1,0 +1,18 @@
+# WEATHER EVENT DEFINITIONS (PHASE 4)
+To ensure reproducibility and avoid arbitrary threshold selection, weather events were defined using the historical distribution of the Udupi/NASA dataset (2010-2016).
+
+1. HEAVY RAIN
+- Definition: A day where precipitation exceeds the 90th percentile of all recorded rainy days.
+- Justification: Accounts for the region's heavy monsoon baseline. Using an absolute meteorological standard (e.g., 64.5mm) may yield too few/many examples depending on NASA satellite smoothing. The 90th percentile guarantees isolating the top 10% most severe local storms.
+
+2. PROLONGED RAIN
+- Definition: 3 or more consecutive days of continuous rainfall (>1.0 mm/day).
+- Justification: Captures sustained monsoon episodes. Shevanti supply chains can often absorb one day of heavy rain, but multi-day episodes cause transportation failure and flower rot, potentially yielding a distinct price signature.
+
+3. EXTREME HEAT
+- Definition: A day where the Maximum Temperature exceeds the 95th percentile of the entire dataset.
+- Justification: Isolates the top 5% hottest days in the 7-year history, testing the hypothesis that extreme heat causes rapid wilting and sudden supply drops.
+
+4. EXTREME HUMIDITY
+- Definition: A day where Relative Humidity exceeds the 95th percentile.
+- Justification: High humidity combined with heat drastically reduces the shelf-life of perishable floriculture.

@@ -1,0 +1,6 @@
+# RESEARCH LOG - IMPORTANT DECISIONS
+Phase 1 & 2 Execution:
+- Anomaly Handling (Weather): Discovered 12 trailing NaN rows at the end of the raw NASA weather.csv file. Programmatically dropped these before merging to prevent null-date errors.
+- Extreme Value Retention (Prices): Retained all high-variance price shocks (e.g., maximum price of ₹2909) and high-variance weather events (e.g., 154mm rainfall). 
+- Derived Features: Raw NASA data provided Mean Temperature and Temperature Range. Derived Max_Temp and Min_Temp mathematically to satisfy Phase 2 table requirements.
+- Merge Strategy: Utilized an inner join on the converted standard datetime column. Yielded exactly 2,557 rows with zero missing days between 2010 and 2016.
