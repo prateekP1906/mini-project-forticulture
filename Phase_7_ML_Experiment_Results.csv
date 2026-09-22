@@ -1,0 +1,6 @@
+Experiment,Algorithm,Inputs,MAE (₹),RMSE (₹),R² Score
+Model A — Simple Baseline,Linear Regression,Yesterday Price (PRICE_LAG_1),107.48,141.55,0.6232
+Model B — Price-Only ML,Random Forest,Recent Price Features,113.53,150.36,0.5748
+Model B — Price-Only ML,XGBoost,Recent Price Features,111.17,145.56,0.6016
+Model C — Weather-Aware ML,Random Forest,Price + Weather Features,116.1,149.1,0.5819
+Model C — Weather-Aware ML,XGBoost,Price + Weather Features,114.67,148.39,0.5859
